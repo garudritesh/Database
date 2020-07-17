@@ -48,4 +48,4 @@
 
           Select snum, sname, city, comm From Salespeople where (comm > .12 OR comm <.14);
 
-       Ans: Select * From Salespeople where (comm > .12 OR comm <.14);
+       Ans: Select * From Salespeople where comm = 0.13;
