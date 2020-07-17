@@ -9,7 +9,7 @@
          When multiple fields are used as a primary key, they are called a composite key.
 
          If a table has a primary key defined on any fields, then you cannot have two records having
-         the same value of that field
+         the same value of that field.
           
            Ex.     CREATE TABLE CUSTOMERS
                       (
