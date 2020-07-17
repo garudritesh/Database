@@ -41,6 +41,7 @@
 
     4) Why isn’t it possible to see the first five rows of a table?
  
-    Ans: It is possible to see first five rows of table.
-    
-         select * from table LIMIT 5;
+    Ans: When you update a row if the row lenght is incresed the entire roe may move
+         to some other values address.later when you select from table you will find row 
+         at some other position in the output. hence, it is not possible to view first or
+         last row of the table.
