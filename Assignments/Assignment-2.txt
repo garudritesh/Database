@@ -1,0 +1,46 @@
+                                      Assignment - 2
+
+    1) Which field of the Customers table is the primary key?
+
+    Ans: A primary key is a field in a table which uniquely identifies each row/record in a database table.
+         Primary keys must contain unique values. A primary key column cannot have NULL values.
+
+         A table can have only one primary key, which may consist of single or multiple fields.
+         When multiple fields are used as a primary key, they are called a composite key.
+
+         If a table has a primary key defined on any fields, then you cannot have two records having
+         the same value of that field
+          
+           Ex.     CREATE TABLE CUSTOMERS
+                      (
+                         ID   INT              NOT NULL,
+                         NAME VARCHAR (20)     NOT NULL,
+                         AGE  INT              NOT NULL,
+                         ADDRESS  CHAR (25) ,
+                         SALARY   DECIMAL (18, 2),       
+                         PRIMARY KEY (ID)
+                      );
+
+
+    2) What is the 4th column of the Customers table?
+ 
+    Ans: Customer table 4th column is Rating. 
+         so to have only rating column,
+        
+         select rating from customer;
+
+    3) What is another word for row? For column?
+
+    Ans: another word for row is :    1. Tuple
+                                      2. Entity
+                                      3. Opportunity
+         
+         another word for column is : 1. Attribute
+                                      2. Method
+
+
+    4) Why isn’t it possible to see the first five rows of a table?
+ 
+    Ans: It is possible to see first five rows of table.
+    
+         select * from table LIMIT 5;
