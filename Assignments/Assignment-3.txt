@@ -10,11 +10,11 @@
 
               in the date range 0001-01-01 CE through 9999-12-31 CE."
 
-         2. what is DML?
+         2. what is DML ?
 
          Ans: Data Manipulation Language : It contains various syntaxes related to manipulation of data
 
               To Insert data there is an insert syntax which works as follows
 
-              Insert into tablename values (col1data,col2data,…)
+              Insert into tablename values (col1data,col2data,…).
   
