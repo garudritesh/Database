@@ -10,7 +10,7 @@
 
               in the date range 0001-01-01 CE through 9999-12-31 CE."
 
-         2. 
+         2. what is DML?
 
          Ans: Data Manipulation Language : It contains various syntaxes related to manipulation of data
 
