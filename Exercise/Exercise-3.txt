@@ -37,6 +37,12 @@
 
            8. Use the soundex function to search for a supplier by the name of ‘BLOKE’.
 
+	   Ans: SELECT SOUNDEX(BLOKE’);
+
            9. Display the Supplier name and the status (as Ten, Twenty, Thirty, etc.).
 
+	   Ans: select sname ,status from supplier;
+
            10. Display the current day (e.g. Thursday). 
+
+           Ans: SELECT DAY(CURDATE());
