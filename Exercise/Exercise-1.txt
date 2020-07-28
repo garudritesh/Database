@@ -104,7 +104,7 @@ Write the SELECT queries to do the following:-
 >	select * from supplier; 
 
 
-7. Display only the S# and SNAME fields from the S table. 
+7. Display only the S# and SNAME fields from the S table 
 
 >	select `S#`,Sname from supplier;
 
