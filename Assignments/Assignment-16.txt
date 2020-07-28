@@ -16,4 +16,4 @@
           4) Let us assume that each salesperson is to have only one customer of a given rating, and that this is currently the case. 
              Enter a command that enforces it.
 
-          Ans: 
+          Ans: alter table customers modify rating constraint rate_pk PRIMARY KEY;
