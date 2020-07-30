@@ -1,0 +1,84 @@
+
+
+                                                            Exercise - 2
+
+
+	1. Select from any table a number and determine whether it is within a given range (for example, between 1 and 10).
+
+	Ans: delimiter //
+	     create procedure abc()
+	begin
+	declare x int;
+	select id into x from employee where fname='Pratik';
+    if(x between 1 and 10) then
+		select concat(x, ' is between 1 and 10');
+	else
+		select concat(x, ' is not between 1 and 10');
+	end if;
+	end; //
+	delimiter ;
+
+	call abc();
+
+	
+	2. Select from any table three positive integers representing the sides of a triangle, and determine whether
+	   they form a valid triangle. Hint: In a triangle, the sum of any two sides must always be greater than the third side.
+
+	
+	Ans: delimiter //
+	     create procedure abc()
+	begin
+	declare x int;
+    declare y int;
+    declare z int;
+    select id into x from employee where fname='Reshma';
+    select id into y from employee where fname='Onkar';
+    select id into z from employee where fname='Sneha';
+    if(x+y>z and y+z>x and x+z>y) then
+		select 'Valid Triangle' as type;
+	else
+		select 'Invalid Triangle' as type;
+	end if;
+	end; //
+	delimiter ;
+
+	call abc();
+
+
+	2. Select from any table three positive integers representing the sides of a triangle, and determine
+	   whether they form a valid triangle. Hint: In a triangle, the sum of any two sides must always be greater than the third side.
+
+	Ans: delimiter //
+	     create procedure abc(y int)
+	  begin
+	if(mod(y,4)=0 and mod(y,100)!=0 or mod(y,400)=0) then
+		select 'Leap Year' year_type;
+	else
+		select 'Not a Leap Year' year_type;
+	end if;
+	end; //
+	delimiter ;
+
+	call abc(2020);
+
+
+	4. Write a program that Selects from any table two character strings. Your program should then determine if one
+	   character string exists inside another character string.
+
+	Ans: delimiter //
+	     create procedure abc()
+	   begin
+	declare sub varchar(20);
+    declare var varchar(20);
+	select fname into var from employee where id=1;
+    select substr(fname,2,2) into sub from employee where id=1;
+    if(instr(sub, var)!=0 or instr(var, sub)!=0) then
+		select 'It is a substring';
+	else
+		select 'Not a substring';
+	end if;
+	end; //
+	delimiter ;
+
+	call abc();
+

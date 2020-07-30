@@ -1,0 +1,103 @@
+
+
+							Exercise - 1
+
+ 
+
+	1. Write a program that computes the perimeter and the area of a rectangle. Define your own values for the length and width.
+	   (Assuming that L and W are the length and width of the rectangle, Perimeter = 2*(L+W) and Area = L*W.
+
+	Ans: delimiter //
+	     create procedure per_area_rect()
+             begin
+	     declare L int default 10;
+	     declare W int default 20;
+             declare A float(7,2);
+             declare P float(7,2);
+             set A = L*W;
+             set P = 2*(L+W);
+	     select A, P;
+             end; //
+             delimiter ;
+
+
+
+	2. Write a program that declares an integer variable called num, assigns a value to it, and computes and
+	   inserts into the tempp table the value of the variable itself, its square, and its cube.
+
+	Ans: delimiter //
+             create procedure num_calc(num int)
+             begin
+	     insert into tempp values(num, num*num, num*num*num);
+             end; //
+             delimiter ;
+
+             select * from tempp;
+
+
+	3. Convert a temperature in Fahrenheit (F) to its equivalent in Celsius (C) and vice versa.
+           The required formulae are:- C= (F-32)*5/9  F= 9/5*C + 32
+
+	Ans: delimiter //
+	     create procedure tempconv(temp float(7,3))
+	     begin
+             declare C float(7,3);
+             declare F float(7,3);
+	     set C = (temp-32)*5/9;
+             set F = 9/5*temp+32;
+            select C as Celcius, F as Farhenheit;
+            end; //
+            delimiter ;
+
+	    call tempconv(33);
+
+
+	4. Convert a number of inches into yards, feet, and inches. For example, 124 inches equals 3 yards, 1 foot, and 4 inches.
+
+ 	Ans: delimiter //
+	     create procedure numconv(num int)
+             begin
+	     declare F int;
+             declare Y int;
+             declare I int;
+             declare temp int;
+             set Y = num/36;
+             set temp = mod(num, 36);
+             set F = temp/12;
+             set temp = mod(temp, 12);
+             set I = temp;
+             select concat(Y,' yards, ',F,' feet ', 'and ',I,' inches.') as converted;
+	     end; //
+	     delimiter ;
+
+	     call numconv(124);
+
+	5. Write a program that enables a user to input an integer. The program should then state whether the integer is evenly divisible by 5.
+
+	Ans: delimiter //
+	     create procedure divisible(num int)
+	     begin
+	     if(mod(num,5)=0) then
+		select concat(num,' is divisible by 5');
+	  else
+		select concat(num,' is not divisible by 5');
+	end if;
+	end; //
+	delimiter ;
+
+	call divisible(125);
+
+	6. Your block should read in two real numbers and tell whether the product of the two numbers is equal to or greater than 100.
+
+	Ans: delimiter //
+	     create procedure divisible(x int, y int)
+	begin
+	        if(x*y>=100) then
+		select 'Product is greater than 100';
+	else
+		select 'Product is not greater than 100';
+	end if;
+	end; //
+	delimiter ;
+
+	call divisible(12, 15);
