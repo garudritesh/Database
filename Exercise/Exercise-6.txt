@@ -37,7 +37,7 @@
 
 	Ans: select Sname "Suppliers Name" from S where `S#` = (select `S#` from SPJ where Qty = (select max(Qty) from SPJ GROUP BY Qty ORDER BY max(Qty) desc limit 1));
 
-	9. Display the name of the Department with the maximum number of Employees.   
+	9. Display the name of the Department with the maximum number of Employees   
 
 	Ans: 1) select dname "Department name" from dept where deptno = (select deptno from emp GROUP BY deptno
 	     ORDER BY count(deptno) desc limit 1);
